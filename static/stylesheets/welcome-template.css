@@ -1,6 +1,6 @@
 body  {
   min-height:100%;
-  background-image: url("/static/stylesheets/background.jpeg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3));
+  background-image: url("/static/stylesheets/background.jpeg"), linear-gradient(rgb(231, 174, 121),rgba(106, 180, 241, 0.993));
   background-blend-mode: overlay;
   background-size:cover;
 }
@@ -13,7 +13,7 @@ body  {
 
 .center {
   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}​
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
