@@ -3,9 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/julienschmidt/httprouter"
 	"log"
 	"net/http"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 var (
@@ -29,10 +30,10 @@ func main() {
 func show(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	k := p.ByName("key")
 	if k == "" {
-		fmt.Fprint(w, "Read list: %v", data)
+		fmt.Fprintf(w, "Read list: %v", data)
 		return
 	}
-	fmt.Fprint(w, "Read entry: data[%s] = %s", k, data[k])
+	fmt.Fprintf(w, "Read entry: data[%s] = %s", k, data[k])
 }
 
 func update(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
@@ -40,5 +41,5 @@ func update(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	v := p.ByName("value")
 
 	data[k] = v
-	fmt.Fprint(w, "Updated: data[%s] = %s", k, data[k])
+	fmt.Fprintf(w, "Updated: data[%s] = %s", k, data[k])
 }
